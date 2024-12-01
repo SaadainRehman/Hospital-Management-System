@@ -6,3 +6,5 @@ class Pateint:
         self._Cnic = cnic
         self._Address = address
         self._Dept = department
+
+    

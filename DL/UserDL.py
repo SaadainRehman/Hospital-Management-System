@@ -5,7 +5,7 @@ class UserDL:
         self.Users = []  
     def sign_up(self, username, password, role):
         for existing_user in self.Users:
-            if existing_user.username == username:
+            if existing_user.username == username:  
                 print("This User Already Exists")
                 return False
 
@@ -16,14 +16,14 @@ class UserDL:
 
     def sign_in(self, username, password):
         for existing_user in self.Users:
-            if existing_user.username == username:
-                if existing_user.validate_password(password):
-                    print(f"Welcome Back {existing_user.username}!!")
+            if existing_user.username == username: 
+                if existing_user.password == password:
+                    print(f"Welcome Back {username}!")
                     return existing_user
                 else:
                     print("Incorrect Password")
                     return None
-        print("Username not Found!!")
+        print("Username not Found!")
         return None
 
     def show_users(self):
@@ -31,6 +31,6 @@ class UserDL:
             print("No users found")
         else:
             for user in self.Users:
-                print(f"Username: {user.username}, Role: {user.role}")
+                print(f"Username: {user._username}, Role: {user._role}")
 
 
