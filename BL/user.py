@@ -1,8 +1,8 @@
 class User:
     def __init__(self , username , password , role):
-        self.__username = username 
-        self.__password = password 
-        self.__role = role
+        self._username = username 
+        self._password = password 
+        self._role = role
 
-    def editname(self):
-        pass
+    def validate_pass(self , password):
+        return self.password == password
